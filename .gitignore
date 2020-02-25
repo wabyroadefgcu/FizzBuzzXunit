@@ -12,6 +12,7 @@ wwwroot/node_modules
 
 
 ### VisualStudioCode ###
+.vscode/
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json

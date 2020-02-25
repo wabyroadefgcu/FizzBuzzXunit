@@ -56,5 +56,48 @@ namespace tests
         //Then
             Assert.Equal("FizzBuzz",response);
         }
+
+        [Theory]
+        [InlineData(3)]
+        [InlineData(6)]
+        [InlineData(18)]
+        [InlineData(21)]
+        public void ReturnFizzOnMultipleOf3(int valueInput)
+        {
+        //Given
+            var response = _fizzBuzz.ReturnValue(valueInput);
+        //Then
+            Assert.Equal("Fizz", response);
+        }
+
+        [Theory]
+        [InlineData(5)]
+        [InlineData(10)]
+        [InlineData(20)]
+        [InlineData(25)]
+        [InlineData(70)]
+        public void ReturnFizzOnMultipleOf5(int valueInput)
+        {
+        //Given
+            var response = _fizzBuzz.ReturnValue(valueInput);
+        //Then
+            Assert.Equal("Buzz", response);
+        }
+
+        [Theory]
+        [InlineData(15)]
+        [InlineData(30)]
+        [InlineData(45)]
+        [InlineData(60)]
+        [InlineData(75)]
+        public void ReturnFizzBuzzOnMultipleOf15(int valueInput)
+        {
+        //Given
+            var response = _fizzBuzz.ReturnValue(valueInput);
+        //Then
+            Assert.Equal("FizzBuzz", response);
+        }
+
     }
 }
+
